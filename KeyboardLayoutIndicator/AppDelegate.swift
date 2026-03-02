@@ -5,8 +5,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
     private var popupController: PopupWindowController?
     private var monitor: KeyboardLayoutMonitor?
+    private var appSelectionController: AppSelectionWindowController?
     private let statusMenu: NSMenu = {
         let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Show Popup In…", action: #selector(openAppSelection), keyEquivalent: ""))
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         return menu
     }()
@@ -26,7 +29,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popupController = PopupWindowController()
         monitor = KeyboardLayoutMonitor { [weak self] (layoutName: String) in
             self?.statusItem?.button?.title = layoutName
-            self?.popupController?.show(layoutName: layoutName)
+            if AppPreferences.shared.shouldShowPopup() {
+                self?.popupController?.show(layoutName: layoutName)
+            }
         }
         monitor?.start()
     }
@@ -36,6 +41,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem?.menu = statusMenu
         statusItem?.button?.performClick(nil)
         statusItem?.menu = nil
+    }
+
+    @objc private func openAppSelection() {
+        if appSelectionController == nil {
+            appSelectionController = AppSelectionWindowController()
+        }
+        appSelectionController?.showWindow(nil)
     }
 
     func currentLayoutName() -> String {

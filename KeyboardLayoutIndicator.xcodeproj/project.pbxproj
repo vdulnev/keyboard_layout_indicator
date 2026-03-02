@@ -12,6 +12,8 @@
 		KLI001000000000000000003 /* KeyboardLayoutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = KLI000000000000000000003 /* KeyboardLayoutMonitor.swift */; };
 		KLI001000000000000000004 /* PopupWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = KLI000000000000000000004 /* PopupWindowController.swift */; };
 		KLI001000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = KLI000000000000000000005 /* Assets.xcassets */; };
+		KLI001000000000000000007 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = KLI000000000000000000007 /* AppPreferences.swift */; };
+		KLI001000000000000000008 /* AppSelectionWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = KLI000000000000000000008 /* AppSelectionWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		KLI000000000000000000004 /* PopupWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWindowController.swift; sourceTree = "<group>"; };
 		KLI000000000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		KLI000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		KLI000000000000000000007 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		KLI000000000000000000008 /* AppSelectionWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionWindowController.swift; sourceTree = "<group>"; };
 		KLI000000000000000000010 /* KeyboardLayoutIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardLayoutIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,6 +44,8 @@
 				KLI000000000000000000002 /* AppDelegate.swift */,
 				KLI000000000000000000003 /* KeyboardLayoutMonitor.swift */,
 				KLI000000000000000000004 /* PopupWindowController.swift */,
+				KLI000000000000000000007 /* AppPreferences.swift */,
+				KLI000000000000000000008 /* AppSelectionWindowController.swift */,
 				KLI000000000000000000005 /* Assets.xcassets */,
 				KLI000000000000000000006 /* Info.plist */,
 			);
@@ -116,6 +122,8 @@
 				KLI001000000000000000002 /* AppDelegate.swift in Sources */,
 				KLI001000000000000000003 /* KeyboardLayoutMonitor.swift in Sources */,
 				KLI001000000000000000004 /* PopupWindowController.swift in Sources */,
+				KLI001000000000000000007 /* AppPreferences.swift in Sources */,
+				KLI001000000000000000008 /* AppSelectionWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
